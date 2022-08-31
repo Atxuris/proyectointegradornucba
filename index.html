@@ -1,180 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>Proyecto Integrador Nucba</title>
-</head>
 
-<body>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  </head>
 
+  <body>
     <!-- Encabezado del Proyecto -->
     <header>
-        <div class="menu-container">
-            <a href="../index.html"><img class="logo" src="img/Logotipo.svg" alt="logotipo" width="150px"></a>
-            
-            <nav>
-                <div><a href="../index.html" class="menu">Inicio</a></div>
-                <div><a href="#productos" class="menu">Productos</a></div>
-                <div><a href="Contacto.html" class="menu">Contacto</a></div>
-                <div><a href="Login.html" class="menu">Login</a></div>
-                <div><a href="Registrate.html" class="button">Regístrate</a></div>
+      <nav>
+        <ul class="menu-container">
+          <li><a href="../index.html"><img class="logo" src="img/Logotipo.svg" alt="logotipo"/></a></li>
+          
+          <div class="container-items">
+            <li class="menu"><a href="../index.html">Inicio</a></li>
+            <li class="menu"><a href="#productos">Productos</a></li>
+            <li class="menu"><a href="Contacto.html">Contacto</a></li>
+            <li class="menu"><a href="Login.html">Login</a></li>
+            <li class="menu"><a href="Registrate.html">Regístrate</a></li>
+          </div>
 
-                <label for="menu-toggle">
-                    <div class="menu-button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </label>
-
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <ul class="toggle">
-                    <li>Inicio</li>
-                    <li>Productos</li>
-                    <li>Contacto</li>
-                    <li>Login</li>
-                    <li>Regístrate</li>
-                </ul>
-            </nav>
-        </div>
-
+            <div class="btn__container"><a href="#"><i class="fa-solid fa-bars"></i></a></div>
+          
+        </ul>
+      </nav>
     </header>
 
     <!-- Contenido -->
 
-        <div class="section">
-            <p class="párrafo1">Seguí en lo tuyo</p>
-            <p class="párrafo2">Pedilo al toque y te lo llevamos</p>
-            <p class="párrafo3">Café artesanal, directo a tu hogar</p>
-            <img class="cafe" src="img/Group 7.svg" alt="Café">
-            <img class="galletas" src="img/Group 8.svg" alt="galletitas">
-         </div>
+    <main>
+      <!-- Section -->
+      <div class="section">
 
-        <div class="section1" id="productos">
-            <p class="párrafo4">Te lo ofrecemos y te lo llevamos</p>
-            <p class="párrafo5">Nuestros productos en tus <span>manos</span></p>
-            <p class="párrafo6">Elegí cómo y cuándo lo deseas</p>
-
-
-    <!-- Vasos de café -->
-
-    <div class="vasos">
-
-        <div class="vaso1"> 
-            <img class="vasodecafe" src="img/vasodecafe.svg" alt="vasodecafe">
-
-            <div class="box">
-                <p class="párrafo7">Precio incluye delivery*</p>
-                <p class="párrafo8">Expreso</p>
-                <p class="párrafo9">Café artesanal, listo para llenarte de energía, con textura y único sabor.</p>
-            </div> 
-
-                <p class="párrafo10">Precio: $500</p>
-                <button class="vaso">Pedilo ahora</button><br>
-                <p class="párrafo11">"Si no llega caliente te descontamos el 10%"</p>
-        </div>   
-
-
-        <div class="vaso2">
-            <img class="vasodecafe" src="img/vasodecafe.svg" alt="vasodecafe">
-
-            <div class="box">  
-                <p class="párrafo7">Precio incluye delivery*</p>
-                <p class="párrafo8">Expreso</p>
-                <p class="párrafo9">Café artesanal, listo para llenarte de energía, con textura y único sabor.</p>
-            </div>
-
-                <p class="párrafo10">Precio: $500</p>
-                <button class="vaso">Pedilo ahora</button><br>
-                <p class="párrafo11">"Si no llega caliente te descontamos el 10%"</p>
+        <div class="section-text">
+          <h3>Seguí en lo tuyo</h3>
+          <h1>Pedilo al toque y te lo llevamos</h1>
+          <h3>Café artesanal, directo a tu hogar</h3>
         </div>
 
-        <div class="vaso3">
-            <img class="vasodecafe" src="img/vasodecafe.svg" alt="vasodecafe">
-
-            <div class="box">     
-                <p class="párrafo7">Precio incluye delivery*</p>
-                <p class="párrafo8">Expreso</p>
-                <p class="párrafo9">Café artesanal, listo para llenarte de energía, con textura y único sabor.</p>
-            </div>
-
-                <p class="párrafo10">Precio: $500</p>
-                <button class="vaso">Pedilo ahora</button><br>
-                <p class="párrafo11">"Si no llega caliente te descontamos el 10%"</p>
+        <div class="section-img">
+          <img class="cafe_galletas" src="img/cafe y galletas.svg" alt="Café y galletas"/>
         </div>
+      </div>
+
+      <!-- Section Terminada -->
+
+      <!-- Vasos de café -->
+
+      <!-- Section 1 -->
+
+      <div class="section1" id="productos">
+        <h3>Te lo ofrecemos y te lo llevamos</h3>
+        <h1>Nuestros productos en tus <span>manos</span></h1>
+        <h3>Elegí cómo y cuándo lo deseas</h3>
+      </div>
+
+      <div class="vasos">
         
-    </div>
-        <p class="soda">Todos nuestros cafés vienen con <span>galletitas y soda</span></p>
-
-    </div>
-
-    <div class="section2">
-
-        <div class="formulario">
-            <form>
-                <p class="p1">Aprendemos de los mejores</p>
-                <p class="p2">Ayudanos a mejorar</p>
-                <p class="p3">o envíanos <span>♥</span></p><br>
-
-                <p>
-                    <label class="nombre" for="nombre">Nombre completo:</label><br>
-                    <input type="text" name="nombre" id="nombre" placeholder="nombre">
-                </p>
-                <p>
-                    <label class="email" for="email">Email:</label><br>
-                    <input type="text" name="email" id="email" placeholder="correo electrónico">
-                </p>
-                <p>
-                    <label class="mensaje" for="Mensaje">Mensaje:</label>
-                    <textarea name="Mensaje" id="mensaje" cols="80" rows="10"></textarea>
-                </p>
-                <p>
-                    <input class="enviar" type="submit" name="enviar" value="Enviar">
-                </p>
-            </form>
+        <!-- Vaso 1 -->
+        <div class="vaso1">
+          <img class="vasodecafe" src="img/vasodecafe.svg" alt="vasodecafe"/>
+          <div class="box">
+            <h3>Precio incluye delivery*</h3>
+            <h1>Expreso</h1>
+            <h3>Café artesanal, listo para llenarte de energía, con textura y único sabor.</h3>
+          </div>
+          <h3><strong>Precio:</strong> $500</h3>
+          <button class="vaso__btn">Pedilo ahora</button>
+          <p>"Si no llega caliente te descontamos el 10%"</p>
         </div>
+
+        <!-- Vaso 2 -->
+        <div class="vaso2">
+          <img class="vasodecafe" src="img/vasodecafe.svg" alt="vasodecafe"/>
+          <div class="box">
+            <h3>Precio incluye delivery*</h3>
+            <h1>Café con <span>leche</span></h1>
+            <h3>Café artesanal, listo para llenarte de energía, con textura y único sabor.</h3>
+          </div>
+          <h3><strong>Precio:</strong> $500</h3>
+          <button class="vaso__btn">Pedilo ahora</button><br/>
+          <p>"Si no llega caliente te descontamos el 10%"</p>
+        </div>
+
+        <!-- Vaso 3 -->
+        <div class="vaso3">
+          <img class="vasodecafe" src="img/vasodecafe.svg" alt="vasodecafe"/>
+          <div class="box">
+            <h3>Precio incluye delivery*</h3>
+            <h1>Argentina</h1>
+            <h3>Café artesanal, listo para llenarte de energía, con textura y único sabor.</h3>
+          </div>
+          <h3><strong>Precio:</strong> $500</h3>
+          <button class="vaso__btn">Pedilo ahora</button><br/>
+          <p>"Si no llega caliente te descontamos el 10%"</p>
+        </div>
+      </div>
+
+      <h2 class="soda">Todos nuestros cafés vienen con <span>galletitas y soda</span></h2>
+      
+
+      <!-- Vasos de café - Terminada -->
+
+      <!-- Section 2 Formulario -->
+
+      <div class="section2">
+        <div class="formulario">
+          <form>
+            <h3 class="aprendemos">Aprendemos de los mejores</h3>
+            <h1>Ayudanos a mejorar</h1>
+            <h3>o envíanos <span>♥</span></h3>
+
+            <label class="nombre" for="nombre">Nombre completo:</label><br/>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre"/>
+
+            <label class="email" for="email">Email:</label><br/>
+            <input type="text" name="email" id="email" placeholder="Correo Electrónico"/>
+
+            <label class="mensaje" for="Mensaje">Mensaje:</label>
+            <textarea name="Mensaje" id="mensaje" cols="43" rows="5"></textarea>
+
+            <input class="enviar" type="submit" name="enviar" value="Enviar"/>
+          </form>
+        </div>
+
+        <!-- Section 2 Formulario - Terminada -->
+
+        <!-- Section 2 Encuentranos -->
 
         <div class="encuentranos">
-            <p class="ciudad">Desde la casa para toda la ciudad.</p>
-            <p class="caba">Por ahora solo en CABA</p>
-            <p class="arg">Ciudad Autónoma de Buenos Aires, Argentina.</p>
-            <p class="tlf">Telf: 11 5555555</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.0642823270905!2d-58.413233684771086!3d-34.577239980466395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb57a416cbf91%3A0xf6fad65042f6daf7!2sAv.%20del%20Libertador%203000%2C%20C1425%20CABA!5e0!3m2!1ses-419!2sar!4v1655856223135!5m2!1ses-419!2sar" width="400" height="300" style="border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>   
-    </div>
-
+          <h3 class="ciudad">Desde la casa para toda la ciudad</h3>
+          <h1>Por ahora solo en CABA</h1>
+          <h3>Ciudad Autónoma de Buenos Aires, Argentina.</h3>
+          <h3 class="tlf">Telf: 11 5555555</h3>
+          <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.0642823270905!2d-58.413233684771086!3d-34.577239980466395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb57a416cbf91%3A0xf6fad65042f6daf7!2sAv.%20del%20Libertador%203000%2C%20C1425%20CABA!5e0!3m2!1ses-419!2sar!4v1655856223135!5m2!1ses-419!2sar" style="border-radius: 8px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </main>
 
     <!-- Pie de Página -->
-    
+
     <footer>
-        <div class="caja-principal">
-            <div class="caja-adicional">
-                <div class="caja1">
-                    <a href="../index.html"><img class="logo2" src="img/Logotipo.svg" alt="logotipo" width="150px"></a>
-                    <p class="delivery">@2022 Coffee Delivery</p>
-                </div>
-                <div class="caja2">
-                    <div><a href="../index.html" class="menu">Inicio</a></div>
-                    <div><a href="#productos" class="menu">Productos</a></div>
-                    <div><a href="Contacto.html" class="menu">Contacto</a></div>
-                    <div><a href="Login.html" class="menu">Login</a></div>
-                    <div><a href="Registrate.html" class="button">Regístrate</a>
-                </div>
-            </div>       
-            <div class="caja3">   
-                <div><a href="http://www.facebook.com" class="menu"><img src="img/FB.svg" alt="Facebook"></a></div>
-                <div><a href="http://www.instagram.com" class="menu"><img src="img/IG.svg" alt="Instagram"> </a></div>
-                <div><a href="http://www.twitter.com" class="menu"><img src="img/TW.svg" alt="Twitter"></a></div>
-            </div>
+      <ul class="caja1">
+        <li class="menu-footer"><a href="#productos">Productos</a></li>
+        <li class="menu-footer"><a href="Contacto.html">Contacto</a></li>
+        <li class="menu-footer"><a href="Login.html">Login</a></li>
+        <button class="btn-footer"><a href="Registrate.html">Regístrate</a></button>
+      </ul>
+
+      <div class="caja2">
+        <div>
+          <a href="http://www.facebook.com" class="menu-redes"><img src="img/FB.svg" alt="Facebook"/></a>
         </div>
+        <div>
+          <a href="http://www.instagram.com" class="menu-redes"><img src="img/IG.svg" alt="Instagram"/></a>
+        </div>
+        <div>
+          <a href="http://www.twitter.com" class="menu-redes"><img src="img/TW.svg" alt="Twitter"/></a>
+        </div>
+      </div>
+      <div class="logo-delivery">
+        <a href="../index.html"><img class="logo2" src="img/Logotipo.svg" alt="logotipo" width="150px"/></a>
+        <p class="delivery">@2022 Coffee Delivery</p>
+      </div>
     </footer>
 
     <button>
-        <a href="https://web.whatsapp.com/" class="whatsapp"><img src="img/buttonws.svg" alt="Whatsapp" width="130px"></a>
+      <a href="https://web.whatsapp.com/" class="whatsapp"><img src="img/buttonws.svg" alt="Whatsapp" width="130px"/></a>
     </button>
-
-</body>
+  </body>
 </html>
