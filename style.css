@@ -96,20 +96,36 @@ nav {
 
 
 .container-items{
-width: 100%;
-order: 1;
-}
-
-
-.menu {
+  display: flex;
+  flex-direction: column;
+  clip-path: circle(0 at center);
+  transition: clip-path 0.9s ease-in-out;
+  align-items: center;
   width: 100%;
   order: 1;
-  text-align: center;
-  /*display: none;*/
 }
+
+
+.menu-toggle:checked + .container-items{
+  clip-path: circle(100% at center);
+}
+
 
 .menu-container i {
   font-size: 2.5rem;
+}
+
+.btn-footer {
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  order: 4;
+  cursor: pointer;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+  margin-top: 10rem;
 }
 
 /* Contenido - Section */
@@ -229,7 +245,8 @@ order: 1;
   border-radius: 0.5rem;
   font-weight: var(--medium);
   font-size: 1.3rem;
-  margin: 0 0 0 4.5rem;
+  margin: 0 0 0 8.5rem;
+  text-align: center;
 }
 .vasodecafe {
   padding: 2rem 4rem 0 4rem;
@@ -289,12 +306,13 @@ order: 1;
 .formulario .nombre {
   font-weight: var(--bold);
   font-size: 1.2rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .formulario #nombre {
   width: 95%;
-  margin: 0.2rem 0 0.2rem 0;
-  padding: 0.2rem 0 0.7rem 0.2rem;
+  margin: 1rem 0 1rem 0.5rem;
+  padding: 0.5rem 0 0.7rem 0.5rem;
   border-radius: 0.3rem;
   background: var(--white);
   border-style: none;
@@ -303,12 +321,13 @@ order: 1;
 .formulario .email {
   font-weight: var(--bold);
   font-size: 1.2rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .formulario #email {
   width: 95%;
-  margin: 0.2rem 0 0.2rem 0;
-  padding: 0.2rem 0 0.7rem 0.2rem;
+  margin: 1rem 0 1rem 0.5rem;
+  padding: 0.5rem 0 0.7rem 0.5rem;
   border-radius: 0.3rem;
   background: var(--white);
   border-style: none;
@@ -317,12 +336,13 @@ order: 1;
 .formulario .mensaje {
   font-weight: var(--bold);
   font-size: 1.2rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .formulario #mensaje {
   width: 95%;
-  margin: 0.2rem 0 0.2rem 0;
-  padding: 0.2rem 0 0.7rem 0.2rem;
+  margin: 1rem 0 1rem 0.5rem;
+  padding: 0.5rem 0 0.7rem 0.5rem;
   border-radius: 0.3rem;
   background: var(--white);
   border-style: none;
@@ -337,7 +357,8 @@ order: 1;
   border-radius: 0.5rem;
   font-weight: var(--medium);
   font-size: 1.3rem;
-  margin: 2rem 0 0 5.5rem;
+  margin: 2rem 0 0 8rem;
+  text-align: center;
 }
 
 /* Section 2 - Formulario - Terminada */
@@ -390,7 +411,7 @@ footer {
 }
 
 .caja1 {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .caja2 {
@@ -422,15 +443,223 @@ footer {
 
 /*login*/
 
+.section-login{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+.formulario-login{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 2rem 1rem 2rem 1rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+.formulario-login h1{
+  font-weight: var(--bold);
+  font-size: 2rem;
+  padding: 0 1rem 0 1rem;
+  color: var(--gray);
+  text-align: center;
+
+}
+
+.formulario-login h2{
+  font-weight: var(--regular);
+  font-size: 1.2rem;
+  padding: 0 1rem 1rem 1rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+.formulario-login h3{
+  font-weight: var(--regular);
+  font-size: 1rem;
+  padding: 0 1rem 0 1rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+.formulario-login .email-login{
+  font-weight: var(--bold);
+  font-size: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: start;
+}
+
+.formulario-login #email-login{
+  width: 95%;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.7rem 0.5rem;
+  border-radius: 0.3rem;
+  background: var(--white);
+  border-style: none;
+}
+
+.formulario-login .contraseña-login{
+  font-weight: var(--bold);
+  font-size: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: start;
+}
+
+.formulario-login #contraseña-login{
+  width: 95%;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.7rem 0.5rem;
+  border-radius: 0.3rem;
+  background: var(--white);
+  border-style: none;
+}
+
+
+.formulario-login .entrar {
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  cursor: pointer;
+  padding: 0.5rem 4rem;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+ }
+
 /*registro*/
 
-/*contacto*/
+
+.section-register{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+
+.formulario-register{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 2rem 1rem 2rem 1rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+.formulario-register h1{
+  font-weight: var(--bold);
+  font-size: 2rem;
+  padding: 0 1rem 0 1rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+.formulario-register h2{
+  font-weight: var(--regular);
+  font-size: 1.2rem;
+  padding: 0 1rem 1rem 1rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+.formulario-register h3{
+  font-weight: var(--regular);
+  font-size: 1rem;
+  padding: 0 1rem 0 1rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+.formulario-register .name-register{
+  font-weight: var(--bold);
+  font-size: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: start;
+}
+
+.formulario-register #name-register{
+  width: 95%;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.7rem 0.5rem;
+  border-radius: 0.3rem;
+  background: var(--white);
+  border-style: none;
+}
+
+
+.formulario-register .email-register{
+  font-weight: var(--bold);
+  font-size: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: start;
+}
+
+.formulario-register #email-register{
+  width: 95%;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.7rem 0.5rem;
+  border-radius: 0.3rem;
+  background: var(--white);
+  border-style: none;
+}
+
+.formulario-register .contraseña-register{
+  font-weight: var(--bold);
+  font-size: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: start;
+}
+
+.formulario-register #contraseña-register{
+  width: 95%;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.7rem 0.5rem;
+  border-radius: 0.3rem;
+  background: var(--white);
+  border-style: none;
+}
+
+
+.formulario-register .confirmarcontraseña-register{
+  font-weight: var(--bold);
+  font-size: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: start;
+}
+
+.formulario-register #confirmarcontraseña-register{
+  width: 95%;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.7rem 0.5rem;
+  border-radius: 0.3rem;
+  background: var(--white);
+  border-style: none;
+}
+
+
+.ingresar{
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  cursor: pointer;
+  padding: 0.5rem 4rem;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
 
 .whatsapp {
   position: fixed;
   width: 170px;
   height: 170px;
-  left: 1500px;
+  left: 1300px;
   top: 370px;
 }
 
@@ -438,11 +667,21 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
+
+
 /*Responsive*/
+
+
+
 
 /* Media queries - Desktop */
 
-@media (min-width: 1024px) {
+
+
+@media (max-width: 1200px) {
  
   /* Menu */
 
@@ -452,12 +691,30 @@ html {
     align-items: center;
   }
 
+  .btn-footer {
+    background: var(--red);
+    color: var(--white);
+    border-style: none;
+    order: 4;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: var(--medium);
+    font-size: 1.3rem;
+    margin: 0 0 0 1rem;
+  }
+
   .container-items{
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     max-width: 800px;
     width: 100%;
+  }
+
+  .menu-toggle{
+    display: flex;
   }
 
   .menu { 
@@ -473,9 +730,7 @@ html {
 
   /* Finalizado el menu */
 
-  /* Contenido */
-
-  /* Section */
+  /* Contenido - Section */
 
   .section{
     flex-direction: row;
@@ -489,15 +744,15 @@ html {
 
   .section h1{
     font-weight: var(--bold);
-    font-size: 3.5rem;
-    padding: 0.5rem 0 1rem 10rem;
+    font-size: 4rem;
+    padding: 0.5rem 0 1rem 3rem;
     max-width: 600px;
   }
 
   .section h3{
     font-weight: var(--thin);
     font-size: 2rem;
-    padding: 0.5rem 0 1rem 10rem;
+    padding: 0.5rem 0 1rem 3rem;
   }
 
   .section-img{
@@ -507,9 +762,7 @@ html {
   
   /* Finalizado Section */
 
-  /* Vasos de café */
-
-  /* Section 1 */
+  /* Vasos de café - Section 1 */
 
   .section1{
     background: var(--white);
@@ -610,11 +863,10 @@ html {
     padding: 1rem 0 2rem 0;
   }
 
-  /* Finalizado - Section 1 */
+  /* Finalizado - Vasos de café - Section 1 */
 
-  /* Vasos de café - Terminada */
 
-  /* Section 2 Formulario */
+  /* Section 2 - Formulario */
 
   .section2{
     display: flex;
@@ -638,8 +890,8 @@ html {
     padding: 0.5rem 4.5rem;
     border-radius: 0.5rem;
     font-weight: var(--medium);
-    font-size: 1.3rem;
-    margin: 4rem 0 0 6rem;
+    font-size: 1.8rem;
+    margin: 2rem 0 0 5rem;
   }
 
   .encuentranos{
@@ -673,7 +925,21 @@ footer .caja1{
   margin-top: 3rem;
   order: 2;
   gap: 2rem;
-  max-height: 5rem;
+  max-height: 6rem;
+  font-size: var(--bold);
+}
+
+.btn-footer {
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  order: 4;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+  margin: 0 0 0 1rem;
 }
 
 .logo-delivery{
@@ -690,16 +956,1175 @@ footer .caja2{
   margin-top: 3rem;
   gap: 1rem;
   order: 3;
-  max-height: 0rem;
+  max-height: 10rem;
 }
+
+/*login*/
+
+.section-login{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+.formulario-login{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 2rem 18rem 2rem 18rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+/*registro*/
+
+
+.section-register{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+
+.formulario-register{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 5rem 10rem 5rem 10rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
 
 .whatsapp {
   position: fixed;
   width: 170px;
   height: 170px;
-  left: 1525px;
+  left: 1000px;
   top: 370px;
+}
+  
 }
 
   
+/* Media queries - Small screens */
+
+@media (max-width: 1024px) {
+ 
+  /* Menu */
+
+
+  .menu-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  
+
+  .btn-footer {
+    background: var(--red);
+    color: var(--white);
+    border-style: none;
+    order: 4;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: var(--medium);
+    font-size: 1.3rem;
+    margin: 0 0 0 1rem;
+  }
+
+  .container-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 800px;
+    width: auto;
+  }
+
+  .menu-toggle{
+    display: flex;
+  }
+
+  .menu { 
+    display: flex;
+    cursor: pointer;
+    width: auto;
+    padding: 20px;
+  }
+
+  .btn__container{
+    display: none;
+  }
+
+  /* Finalizado el menu */
+
+  /* Contenido - Section */
+
+  .section{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .section-text{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section h1{
+    font-weight: var(--bold);
+    font-size: 3.2rem;
+    padding: 0.5rem 0 1rem 0rem;
+    
+  }
+
+  .section h3{
+    font-weight: var(--thin);
+    font-size: 1.5rem;
+    padding: 0.5rem 0 1rem 0rem;
+  }
+
+  .section-img{
+    margin: 0 3rem 2rem;
+    width: 70%;
+  }
+
+  /* Finalizado Section */
+
+  /* Vasos de café - Section 1 */
+
+  .section1{
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .section1 h1{
+    font-weight: var(--bold);
+    font-size: 2.8rem;
+    padding: 0.5rem 0 0 0;
+    color: var(--gray);
+  }
+
+  .section1 h3{
+    font-weight: var(--regular);
+    font-size: 1.6rem;
+    color: var(--gray);
+    padding: 2rem 0 1rem 0;
+  }
+
+  .vasos{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .vasos h1 {
+    font-weight: var(--bold);
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    color: var(--gray);
+  }
+  
+  .vasos h3 {
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+    color: var(--gray);
+    padding: 1rem 1rem 1rem 2rem;
+  }
+  
+  .vasos p {
+    font-weight: var(--thin);
+    font-size: 1rem;
+    color: rgb(122, 122, 122);
+    padding: 1rem 1rem 2rem 2rem;
+  }
+
+  .vaso1 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 2rem 1rem 2rem 1rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vaso2 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 2rem 1rem 2rem 1rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .vaso2 h1{
+    font-weight: var(--bold);
+    font-size: 1.6rem;
+    padding: 1rem 1rem 0.5rem 2rem;
+    color: var(--gray);
+  }
+  
+  .vaso3 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 2rem 1rem 2rem 1rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vasos .vaso__btn {
+    background: var(--red);
+    color: var(--white);
+    border-style: none;
+    cursor: pointer;
+    padding: 0.8rem 4rem;
+    border-radius: 0.5rem;
+    font-weight: var(--medium);
+    font-size: 1.3rem;
+    margin: 0 0 0 2rem;
+  }
+  .vasodecafe {
+    padding: 2rem 4rem 0 4rem;
+  }
+  
+  .soda {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+  }
+
+   /* Finalizado - Section 1 - Vasos de café */
+
+
+  /* Section 2 - Formulario */
+
+  .section2{
+    display: flex;
+  }
+
+  .formulario{
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    max-width: 650px;
+    padding: 3rem 3rem 3rem 3rem;
+    margin: 1rem 3rem 1rem 3rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+
+  }
+
+  .enviar{
+    background: var(--red);
+    color: var(--white);
+    border-style: none;
+    cursor: pointer;
+    padding: 0.5rem 4.5rem;
+    border-radius: 0.5rem;
+    font-weight: var(--medium);
+    font-size: 1.3rem;
+    margin: 2rem 0 0 3.5rem;
+  }
+
+  .encuentranos{
+    font-weight: var(--bold);
+    font-size: 2.5rem;
+    padding: 0 1rem 0 2rem;
+    color: var(--white);
+    text-align: left;
+  }
+
+  .mapa{
+    width: 400px;
+    height: 400px;
+  }
+
+
+/* Section 2 - Encuantranos - Terminada */
+
+/* Pie de Página */
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
 }
+
+footer .caja1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  order: 2;
+  gap: 2rem;
+  max-height: 6rem;
+  font-size: var(--bold);
+}
+
+.btn-footer {
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  order: 4;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+  margin: 0 0 0 1rem;
+}
+
+.logo-delivery{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  order: 1;
+}
+
+footer .caja2{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: 3rem;
+  gap: 1rem;
+  order: 3;
+  max-height: 10rem;
+}
+
+
+/*login*/
+
+.section-login{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+.formulario-login{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 2rem 14rem 2rem 14rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+/*registro*/
+
+.section-register{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+
+.formulario-register{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 5rem 8rem 5rem 8rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+.whatsapp {
+  position: fixed;
+  width: 170px;
+  height: 170px;
+  left: 850px;
+  top: 370px;
+}
+
+ }
+
+
+
+ /* Media queries - iPads */
+
+@media (max-width: 768px) {
+ 
+ /* Menu */
+
+ .menu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 7rem;
+  margin-top: 1rem;
+}
+
+
+.btn-footer {
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  order: 4;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+  margin: 0 0 0 1rem;
+}
+
+.container-items{
+  display: flex;
+  width: auto;
+}
+
+.menu-toggle{
+  display: flex;
+}
+
+.menu { 
+  display: flex;
+  cursor: pointer;
+  width: auto;
+  padding: 20px;
+}
+
+.btn__container{
+  display: none;
+}
+
+/* Finalizado el menu */
+
+
+  /* Contenido - Section */
+
+  .section{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .section-text{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section h1{
+    font-weight: var(--bold);
+    font-size: 2.5rem;
+    padding: 0.5rem 0 1rem 0rem;
+    
+  }
+
+  .section h3{
+    font-weight: var(--thin);
+    font-size: 1.2rem;
+    padding: 0.5rem 0 1rem 0rem;
+  }
+
+  .section-img{
+    margin: 0 3rem 2rem;
+    width: 80%;
+  }
+
+  /* Finalizado Section */
+
+  /* Vasos de café - Section 1 */
+
+  .section1{
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .section1 h1{
+    font-weight: var(--bold);
+    font-size: 2.3rem;
+    padding: 0.5rem 0 0 0;
+    color: var(--gray);
+  }
+
+  .section1 h3{
+    font-weight: var(--regular);
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding: 2rem 0 1rem 0;
+  }
+
+  .vasos{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .vasos h1 {
+    font-weight: var(--bold);
+    font-size: 2rem;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    color: var(--gray);
+  }
+  
+  .vasos h3 {
+    font-weight: var(--regular);
+    font-size: 1rem;
+    color: var(--gray);
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  
+  .vasos p {
+    font-weight: var(--thin);
+    font-size: 1rem;
+    color: rgb(122, 122, 122);
+    padding: 1rem 1rem 2rem 2rem;
+  }
+
+  .vaso1 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem 0rem 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vaso2 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem 0rem 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .vaso2 h1{
+    font-weight: var(--bold);
+    font-size: 1.6rem;
+    padding: 1rem 1rem 0.5rem 2rem;
+    color: var(--gray);
+  }
+  
+  .vaso3 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem 0rem 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vasos .vaso__btn {
+    background: var(--red);
+    color: var(--white);
+    border-style: none;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: var(--medium);
+    font-size: 1rem;
+    margin: 0 0 0 2rem;
+  }
+  .vasodecafe {
+    padding: 2rem 4rem 0 4rem;
+  }
+  
+  .soda {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+  }
+
+   /* Finalizado - Section 1 - Vasos de café */
+
+
+  /* Section 2 - Formulario */
+
+  .section2{
+    display: flex;
+  }
+
+  .formulario{
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    max-width: 400px;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: 1rem 1rem 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .enviar{
+    background: var(--red);
+    color: var(--white);
+    border-style: none;
+    cursor: pointer;
+    padding: 0.5rem 4.5rem;
+    border-radius: 0.5rem;
+    font-weight: var(--medium);
+    font-size: 1.3rem;
+    margin: 2rem 0 0 2.3rem;
+  }
+
+  .encuentranos{
+    font-weight: var(--bold);
+    font-size: 2rem;
+    padding: 0 1rem 0 1rem;
+    color: var(--white);
+    text-align: left;
+  }
+
+  .encuentranos h1 {
+    font-weight: var(--bold);
+    font-size: 1.5rem;
+    padding: 0 0 0 1rem;
+    color: var(--white);
+    text-align: left;
+  }
+  
+  .encuentranos h3 {
+    font-weight: var(--regular);
+    font-size: 1rem;
+    color: var(--white);
+    padding: 0 0 0 1rem;
+    text-align: left;
+  }
+  
+  .encuentranos .ciudad {
+    font-weight: var(--regular);
+    font-size: 1rem;
+    color: var(--white);
+    padding: 2rem 1rem 0 1rem;
+    text-align: left;
+  }
+
+  .encuentranos .tlf{
+    font-weight: var(--regular);
+    font-size: 1rem;
+    color: var(--white);
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    text-align: left;
+  }
+
+  .mapa{
+    width: 300px;
+    height: 300px;
+  }
+
+
+/* Section 2 - Encuantranos - Terminada */
+
+/* Pie de Página */
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer .caja1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 5rem 0 2rem;
+  padding-left: 2rem;
+  order: 2;
+  gap: 1rem;
+  max-height: 6rem;
+  font-size: var(--bold);
+}
+
+.btn-footer {
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  order: 4;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+  margin: 0 0 0 1rem;
+}
+
+.logo-delivery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0 0 17rem;
+  order: 4;
+  width: 10rem;
+}
+
+footer .caja2{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 3rem 5rem 0 0;
+  gap: 1rem;
+  order: 3;
+  max-height: 5rem;
+}
+
+
+/*login*/
+
+.section-login{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+.formulario-login{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 2rem 7rem 2rem 7rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+/*registro*/
+
+.section-register{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+
+.formulario-register{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 5rem 3rem 5rem 3rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+.whatsapp {
+  position: fixed;
+  width: 170px;
+  height: 170px;
+  left: 600px;
+  top: 290px;
+}
+
+ }
+
+
+ /* Media queries - Mobile devices */
+
+@media (max-width: 480px) {
+
+
+
+   /* Menu */
+
+ .menu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 10rem;
+  margin-top: 1rem;
+}
+
+
+.btn-footer {
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  order: 4;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+  margin: 0 0 0 1rem;
+}
+
+.menu-toggle{
+  display: block;
+}
+
+.container-items{
+  display: flex;
+  flex-direction: column;
+  clip-path: circle(0 at center);
+  transition: clip-path 0.9s ease-in-out;
+  align-items: center;
+  width: 100%;
+  order: 1;
+}
+
+
+.menu-toggle:checked + .container-items{
+  clip-path: circle(100% at center);
+}
+
+
+.menu-container i {
+  font-size: 2.5rem;
+}
+
+.menu { 
+  display: flex;
+  cursor: pointer;
+  width: auto;
+  padding: 20px;
+}
+
+.btn__container{
+  display: block;
+}
+
+/* Finalizado el menu */
+
+
+  /* Contenido - Section */
+
+  .section{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section-text{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section h1{
+    font-weight: var(--bold);
+    font-size: 2.8rem;
+    padding: 1rem 0 1rem 0;
+    
+  }
+
+  .section h3{
+    font-weight: var(--thin);
+    font-size: 1.5rem;
+    padding: 0 1rem 0 0;
+  }
+
+  .section-img{
+    width: 100%;
+    padding-top: 4rem;
+  }
+
+  /* Finalizado Section */
+
+  /* Vasos de café - Section 1 */
+
+  .section1{
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .section1 h1{
+    font-weight: var(--bold);
+    font-size: 2rem;
+    padding: 0.5rem 0 0 0;
+    color: var(--gray);
+  }
+
+  .section1 h3{
+    font-weight: var(--regular);
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding: 2rem 0 1rem 0;
+  }
+
+  .vasos{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vasos h1 {
+    font-weight: var(--bold);
+    font-size: 2rem;
+    padding: 0.5rem 1rem 0.5rem 4rem;
+    color: var(--gray);
+  }
+  
+  .vasos h3 {
+    font-weight: var(--regular);
+    font-size: 1rem;
+    color: var(--gray);
+    padding: 1rem 1rem 1rem 4rem;
+  }
+  
+  .vasos p {
+    font-weight: var(--thin);
+    font-size: 1rem;
+    color: rgb(122, 122, 122);
+    padding: 1rem 1rem 2rem 3rem;
+  }
+
+  .vaso1 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem 2rem 1rem 2rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vaso2 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem 2rem 1rem 2rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .vaso2 h1{
+    font-weight: var(--bold);
+    font-size: 2rem;
+    padding: 1rem 1rem 0.5rem 4rem;
+    color: var(--gray);
+  }
+  
+  .vaso3 {
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem 2rem 1rem 2rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vasos .vaso__btn {
+    background: var(--red);
+    color: var(--white);
+    border-style: none;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: var(--medium);
+    font-size: 1rem;
+    margin: 1rem 0 1rem 7.5rem;
+  }
+  .vasodecafe {
+    padding: 2rem 4rem 0 4rem;
+  }
+  
+  .soda {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+  }
+
+   /* Finalizado - Section 1 - Vasos de café */
+
+
+  /* Section 2 - Formulario */
+
+  .section2{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formulario{
+    background: white;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    max-width: 400px;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: 1rem 1rem 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .enviar{
+    background: var(--red);
+    color: var(--white);
+    border-style: none;
+    cursor: pointer;
+    padding: 0.5rem 4.5rem;
+    border-radius: 0.5rem;
+    font-weight: var(--medium);
+    font-size: 1.3rem;
+    margin: 2rem 0 0 3.5rem;
+  }
+
+  .encuentranos{
+    font-weight: var(--bold);
+    font-size: 2rem;
+    padding: 0 1rem 0 1rem;
+    color: var(--white);
+    text-align: left;
+  }
+
+  .encuentranos h1 {
+    font-weight: var(--bold);
+    font-size: 1.5rem;
+    padding: 0 0 0 2rem;
+    color: var(--white);
+    text-align: left;
+  }
+  
+  .encuentranos h3 {
+    font-weight: var(--regular);
+    font-size: 1rem;
+    color: var(--white);
+    padding: 0 0 0 2rem;
+    text-align: left;
+  }
+  
+  .encuentranos .ciudad {
+    font-weight: var(--regular);
+    font-size: 1rem;
+    color: var(--white);
+    padding: 2rem 1rem 0.5rem 2rem;
+    text-align: left;
+  }
+
+  .encuentranos .tlf{
+    font-weight: var(--regular);
+    font-size: 1rem;
+    color: var(--white);
+    padding: 0.5rem 0.5rem 1rem 2rem;
+    text-align: left;
+  }
+
+  .mapa{
+    width: 300px;
+    height: 300px;
+    margin-left: 3rem;
+  }
+
+
+/* Section 2 - Encuantranos - Terminada */
+
+/* Pie de Página */
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .caja1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 8rem 4rem 1rem 2rem;
+  gap: 0.5rem;
+  font-size: var(--bold);
+}
+
+.btn-footer {
+  background: var(--red);
+  color: var(--white);
+  border-style: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 1rem 0 1rem 0;
+  border-radius: 0.5rem;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+}
+
+.logo-delivery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0 0 10rem;
+  width: 10rem;
+}
+
+footer .caja2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem 5rem 0 5rem;
+  gap: 1rem;
+}
+
+
+/*login*/
+
+.section-login{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+.formulario-login{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 2rem 0.5rem 2rem 0.5rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+/*registro*/
+
+.section-register{
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+}
+
+
+.formulario-register{
+  background: white;
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  box-shadow: 0.5rem 0.5rem 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp {
+  position: fixed;
+  width: 150px;
+  height: 170px;
+  left: 330px;
+  top: 290px;
+}
+
+ }
+
+
+
+
+
+
